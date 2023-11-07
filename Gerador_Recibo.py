@@ -6,6 +6,11 @@ pdf.add_page()
 pdf.set_font("Arial", size=14)
 nome = input('Digite o nome: ')
 cpf = str(input('Digite o CPF: '))
+cpf_formatado = f"{cpf[:3]}.{cpf[3:6]}.{cpf[6:9]}-{cpf[9:]}"
+nome_pagador = input('Digite o nome do pagador: ')
+cpf_pagador = input('Digite o CPF do pagador: ')
+cpf_pagador_formatado = f"{cpf_pagador[:3]}.{cpf_pagador[3:6]}.{cpf_pagador[6:9]}-{cpf_pagador[9:]}"
+motivo = input('Digite o motivo do recibo: ')
 local = input('Digite o local do recibo: ')
 while True:
     data = input('Digite a data no formato DD/MM/AAAA: ')
@@ -22,13 +27,13 @@ valor_por_extenso = num2words(valor, lang='pt_BR', to='currency')
 pagamento = ''
 
 while pagamento not in ['débito', 'pix', 'crédito', 'dinheiro']:
-    pagamento = input('Digite o meio de pagamento (Débito, PIX, Crédito, Dinheiro): ').lower()
+    pagamento = input('Digite o meio de pagamento (Débito, Pix, Crédito, Dinheiro): ').lower()
     if pagamento == 'crédito':
         credito = input('Digite em quantas vezes: ')
 
 
 # Defina o texto do recibo
-texto = f'Pelo presente, eu {nome}, inscrito no CPF sob nº {cpf}, declaro que RECEBI na data de hoje {data}, o valor de R$ {valor:.2f} ({valor_por_extenso}), por meio de {pagamento}, de [Nome do Pagador], inscrito no CPF sob nº [CPF do Pagador], referente a [Motivo].'
+texto = f'Pelo presente, eu {nome}, inscrito no CPF sob nº {cpf_formatado}, declaro que RECEBI na data de hoje {data}, o valor de R$ {valor:.2f} ({valor_por_extenso}), por meio de {pagamento}, de {nome_pagador}, inscrito no CPF sob nº {cpf_pagador_formatado}, referente a {motivo}.'
 
 # Texto2
 texto2 = 'Sendo expressão de verdade e sem qualquer coação, firmo o presente recibo.'
@@ -56,5 +61,5 @@ pdf.cell(0,10, txt = f"{local}", align = 'L')
 pdf.cell(0 ,10, txt = data, align = 'R')
 
 # Salve o PDF em um arquivo
-pdf.output("recibo.pdf", 'F')
+pdf.output("C:/Users/leone/Documents/recibo.pdf", 'F')
 print('PDF gerado com sucesso')
