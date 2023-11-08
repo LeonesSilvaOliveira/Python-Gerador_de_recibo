@@ -15,12 +15,15 @@ Instruções de Uso:
 
 Exemplo de uso: python gerar_recibo.py
 
-![image](https://github.com/leonesslv/Python-Gerador_de_recibo/assets/50273318/0a4f9dd2-de56-46f5-8abf-865e0c885ba2)
+![image](https://github.com/leonesslv/Python-Gerador_de_recibo/assets/50273318/5b5176c2-7da2-4544-9fb9-d4181e658935)
+
+
+
 
 Exemplo de Recibo Gerado:
 
-![image](https://github.com/leonesslv/Python-Gerador_de_recibo/assets/50273318/aa417b82-8500-4d5c-805f-d8630f300785)
 
+![image](https://github.com/leonesslv/Python-Gerador_de_recibo/assets/50273318/ba8d5160-ddc6-4db7-bb92-e6132c2ab5b6)
 
 
 
