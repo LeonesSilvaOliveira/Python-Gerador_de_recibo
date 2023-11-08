@@ -61,5 +61,5 @@ pdf.cell(0,10, txt = f"{local}", align = 'L')
 pdf.cell(0 ,10, txt = data, align = 'R')
 
 # Salve o PDF em um arquivo
-pdf.output("C:/Users/leone/Documents/recibo.pdf", 'F')
+pdf.output("recibo.pdf", 'F')
 print('PDF gerado com sucesso')
