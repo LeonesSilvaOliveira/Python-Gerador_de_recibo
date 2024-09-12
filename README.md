@@ -1,4 +1,4 @@
-# Python-Gerador_de_recibo
+# Gerador de Recibo
 Gerador de Recibo
 Título do Repositório: Recibo em Python
 
